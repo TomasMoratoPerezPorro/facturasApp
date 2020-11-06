@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370528028628",
+    "firebase_url": "https://appfacturas-6d8af.firebaseio.com",
+    "project_id": "appfacturas-6d8af",
+    "storage_bucket": "appfacturas-6d8af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370528028628:android:3ec89bf5a9f908361a7841",
+        "android_client_info": {
+          "package_name": "com.example.facturasApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370528028628-kbr9dcg07os1d24ud2qj0d14rrb4mlk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6suHcK-LgB19Ax7p7G25gvVJ7xbI49Nc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370528028628-kbr9dcg07os1d24ud2qj0d14rrb4mlk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

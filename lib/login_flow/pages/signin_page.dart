@@ -19,7 +19,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _SignInPageBody(),
-      backgroundColor: secondaryColor,
+      backgroundColor: Colors.white,
     );
   }
 }
@@ -158,12 +158,12 @@ class _SignInPageBodyState extends State<_SignInPageBody> {
     if (_showLoading) {
       return Container(
         constraints: BoxConstraints.expand(),
-        /* decoration: BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/loginscreen.png"),
+            image: AssetImage("assets/images/softwaregirl.png"),
             fit: BoxFit.cover,
           ),
-        ), */
+        ),
         child: Center(child: CircularProgressIndicator()),
       );
     }
@@ -171,12 +171,6 @@ class _SignInPageBodyState extends State<_SignInPageBody> {
     //  final primaryColor = Theme.of(context).primaryColor;
     return Container(
       constraints: BoxConstraints.expand(),
-      /* decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/images/loginscreen.png"),
-          fit: BoxFit.cover,
-        ),
-      ), */
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -184,8 +178,28 @@ class _SignInPageBodyState extends State<_SignInPageBody> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                isLargeScreen ? SizedBox(height: 300) : SizedBox(height: 240),
+                
+                isLargeScreen ? SizedBox(height: 100) : SizedBox(height: 40),
+                Container(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 300.0,
+                    height: 200.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30.0),
+                        image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/softwaregirl.png",
+                            ),
+                            fit: BoxFit.cover)),
+                  ),
+                ),
                 SizedBox(height: 24),
+                Center(child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Nice to see you !",),
+                )),
+                SizedBox(height: 16),
                 SignInTextField(SignInTextFieldType.email, _ctrlEmail),
                 SizedBox(height: 16),
                 SignInTextField(SignInTextFieldType.password, _ctrlPassword),

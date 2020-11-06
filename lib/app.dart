@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
@@ -35,6 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+ 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            ElevatedButton(onPressed: (){
+              FirebaseAuth.instance.signOut();
+              Navigator.pop(context);
+            }, child: Text("Bye-Bye"))
           ],
         ),
       ),
